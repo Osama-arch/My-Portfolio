@@ -112,7 +112,7 @@ const Navbar = () => {
               <Link href='/'>
                 {
                   <Image
-                    src='/images/logo.svg'
+                    src='/images/logo-black.png'
                     width={
                       windowWidth !== undefined && windowWidth >= 768
                         ? '48'
