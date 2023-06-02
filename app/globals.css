@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Lora', serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 2px black;
+  }
+  .gradient-border,
+  .gradient-border-nav {
+    --borderWidth: 1px;
+  }
+  .gradient-border::after {
+    height: calc(100% + var(--borderWidth) * 2);
+  }
+  .gradient-border-nav:after,
+  .gradient-border::after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      45deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    z-index: -1;
+    animation: animatedgradient 8s ease-in-out alternate infinite;
+    background-size: 300% 300%;
+  }
+  .animate-project-left {
+    animation: animateProjectLeft 1500ms ease alternate forwards;
+  }
+  .animate-project-right {
+    animation: animateProjectRight 1500ms ease alternate forwards;
+  }
+  @keyframes animateProjectLeft {
+    0% {
+      opacity: 1;
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes animateProjectRight {
+    0% {
+      opacity: 1;
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .vid-bg {
+    background: rgb(7, 20, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(7, 20, 36, 1) 0%,
+      rgba(9, 9, 121, 0) 50%,
+      rgba(7, 20, 36, 1) 100%
+    );
+  }
+
+  .img-bg,
+  .img-bg-2 {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .img-bg {
+    background: rgb(148, 187, 233);
+    background: radial-gradient(circle, #172d44 50%, #121c29 100%);
+  }
+  .img-bg-2 {
+    background: rgb(148, 187, 233);
+    background: radial-gradient(circle, transparent 40%, #0b121b 100%);
+  }
+}
