@@ -13,6 +13,7 @@ const ProjectsButtons = ({ githubUrl, preview }: PropsType) => {
       <div className=' gradient-border    relative w-fit rounded bg-no-repeat after:rounded hover:text-hoverBgColor'>
         <Link
           href={preview}
+          aria-label='go to demo live'
           className='  group flex h-full min-w-[88px] items-center justify-between gap-x-1 rounded border-transparent  bg-primaryBgColor  p-1 text-[16px] font-medium  leading-4  text-primaryTextColor hover:bg-primaryBgColor/80 hover:text-hoverBgColor hover:transition  hover:duration-150 hover:ease-in sm:min-w-[96px] sm:p-2  xl:min-w-[112px]'>
           <span>Preview</span>
           <FaExternalLinkSquareAlt
@@ -24,6 +25,7 @@ const ProjectsButtons = ({ githubUrl, preview }: PropsType) => {
       <div className=' gradient-border   relative z-10 w-fit rounded bg-no-repeat after:rounded hover:text-hoverBgColor'>
         <Link
           href={githubUrl}
+          aria-label='go to github repository'
           target='_blank'
           className='  group flex h-full min-w-[88px] items-center justify-between gap-x-1 rounded border-transparent  bg-primaryBgColor  p-1 text-[16px] font-medium  leading-4  text-primaryTextColor hover:bg-primaryBgColor/80 hover:text-hoverBgColor hover:transition  hover:duration-150 hover:ease-in sm:min-w-[96px] sm:p-2  xl:min-w-[112px]'>
           <span>Github</span>
