@@ -123,7 +123,7 @@ const MessageForm = () => {
                   className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
                     errors.user_phone && touched.user_phone
                       ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-0'
+                      : 'focus-visible:outline-1'
                   }`}
                   placeholder='+000-000000000'
                 />
@@ -170,10 +170,10 @@ const MessageForm = () => {
                   rows={4}
                   id='user_comment'
                   name='user_comment'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-2xl placeholder:text-secondaryBgColor/60 focus-visible:outline-2 focus-visible:outline-hoverBgColor ${
+                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-2xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
                     errors.user_comment && touched.user_comment
                       ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-0'
+                      : 'focus-visible:outline-1'
                   }`}
                 />
                 <ErrorMessage
