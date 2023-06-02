@@ -1,11 +1,6 @@
 import { Url } from 'next/dist/shared/lib/router/router';
 import Link from 'next/link';
-import {
-  FaLinkedinIn,
-  FaTwitter,
-  FaGithub,
-  FaTelegramPlane,
-} from 'react-icons/fa';
+import { FaLinkedinIn, FaTwitter, FaGithub, FaDiscord } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 type DataProps = {
   href: Url;
@@ -20,21 +15,25 @@ const data = [
     id: 1,
     href: 'https://www.linkedin.com/in/osama-salman-577926166/',
     Icon: FaLinkedinIn,
+    ariaLabel: ' forward to LinkedIn',
   },
   {
     id: 2,
     href: 'https://github.com/Osama-arch',
     Icon: FaGithub,
+    ariaLabel: ' forward to github',
   },
   {
     id: 3,
-    href: 'mailto:[osama.salman.info@gmail.com]',
-    Icon: FaTelegramPlane,
+    href: 'http://discordapp.com/users/500298812342927360',
+    Icon: FaDiscord,
+    ariaLabel: ' forward to discord',
   },
   {
     id: 4,
     href: 'https://twitter.com/Osama00330398',
     Icon: FaTwitter,
+    ariaLabel: ' forward to twitter',
   },
 ];
 const Social = ({ href, Icon, size }: DataProps) => {

@@ -25,6 +25,7 @@ const ProjectsArrows = ({ index, setIndex, slides }: PropsType) => {
       <div className=' gradient-border relative mx-auto mb-4 flex h-fit w-full items-center justify-between  rounded-full bg-primaryBgColor/80  p-1 after:rounded-full md:w-[50%]'>
         <button
           type='button'
+          aria-label='slide back'
           disabled={isClicked}
           className=' gradient-border relative  z-10 w-fit rounded-[50%]   after:rounded-[50%] '
           onClick={() => {
@@ -49,6 +50,7 @@ const ProjectsArrows = ({ index, setIndex, slides }: PropsType) => {
         <button
           disabled={isClicked}
           type='button'
+          aria-label='slide forward'
           className=' gradient-border relative  z-10 w-fit rounded-[50%]   after:rounded-[50%] '
           onClick={() => {
             setIsClicked(true);
