@@ -16,7 +16,6 @@ const useNavScroll = <T extends HTMLDivElement>(
 
     if (!hasIOSupport || !sectionRef) return;
     const observer = new IntersectionObserver(([entry]) => {
-      console.log(sectionRef.id, entry.isIntersecting);
       if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
         setIsVisible(true);
       } else {
