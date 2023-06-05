@@ -68,8 +68,8 @@ const Contacts = () => {
             </div>
             <div className='flex  items-center pt-4 xl:pt-1 '>
               <p className='  rounded-lg bg-primaryBgColor p-4 text-center text-xl text-primaryTextColor xl:p-7'>
-                If you have a question or a request for us, feel free to contact
-                us using the form on the right.
+                If you have a question or a request for me, feel free to contact
+                me using the form on the right.
               </p>
             </div>
           </div>
