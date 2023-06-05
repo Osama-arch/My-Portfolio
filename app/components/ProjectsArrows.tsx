@@ -21,8 +21,8 @@ const ProjectsArrows = ({ index, setIndex, slides }: PropsType) => {
     setIsClicked(false);
   }, [setIndex]);
   return (
-    <div className='absolute bottom-0 left-0  right-0 z-10 col-start-5 col-end-13 w-full content-center '>
-      <div className=' gradient-border relative mx-auto mb-4 flex h-fit w-full items-center justify-between  rounded-full bg-primaryBgColor/80  p-1 after:rounded-full md:w-[50%]'>
+    <div className='absolute bottom-0 left-0 right-0 z-10 col-start-5 col-end-13  w-full content-center px-4 md:px-0 '>
+      <div className=' gradient-border relative mx-auto mb-4  flex h-fit w-full items-center justify-between  rounded-full bg-primaryBgColor/80  p-1 after:rounded-full md:w-[60%]'>
         <button
           type='button'
           aria-label='slide back'

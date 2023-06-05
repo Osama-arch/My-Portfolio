@@ -27,7 +27,7 @@ const Project = ({ setIsShown, index, isShown, slides }: ProjectProps) => {
   return (
     <div
       ref={containerRef}
-      className={`gradient-border absolute  right-0 top-0 z-10 col-start-5 col-end-13   h-full w-full rounded after:rounded `}
+      className={`gradient-border absolute  right-0 top-0 z-10 col-end-13 h-full   w-full rounded after:rounded lg:col-start-5 `}
       onMouseEnter={() => setIsShown(true)}
       onMouseOut={() => setIsShown(false)}>
       <div

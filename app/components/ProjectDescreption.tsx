@@ -22,10 +22,10 @@ const ProjectDescreption = ({ isShown, index, slides }: DescriptionProps) => {
         return (
           <div
             key={id}
-            className={`  absolute bottom-0 top-0 z-30 col-span-7 col-start-1  mx-0 my-auto    h-fit w-full content-center py-4 transition-all md:col-end-7  ${
+            className={`  absolute bottom-0  top-0 z-30 col-span-7 col-start-1 my-auto   ml-4    h-fit w-full content-center py-4 transition-all md:col-end-7  ${
               isShown &&
               id === index &&
-              'opacity-50  transition-opacity  duration-[500ms]'
+              'opacity-10  transition-opacity  duration-[500ms]'
             } ${
               id === index
                 ? 'animate-project-right opacity-100'

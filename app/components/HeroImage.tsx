@@ -4,7 +4,7 @@ type imgProps = {
 import Image from 'next/image';
 const HeroImage = ({ imageSrc }: imgProps) => {
   return (
-    <div className='gradient-border  relative z-10 hidden w-full max-w-[400px] self-end rounded after:rounded md:block'>
+    <div className='gradient-border  relative z-10  w-full max-w-[400px] rounded after:rounded md:self-end '>
       <div className='relative h-full w-full overflow-hidden rounded'>
         <div className='img-bg opacity-90 '></div>
         <Image

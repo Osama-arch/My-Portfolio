@@ -23,7 +23,7 @@ const Skills = () => {
     <section
       ref={ref}
       id='skills'
-      className={` relative bg-primaryBgColor bg-skill-pattern bg-[center_center] bg-no-repeat py-20 `}>
+      className={` relative grid place-content-center bg-primaryBgColor bg-skill-pattern bg-[center_center] bg-no-repeat py-10 md:py-20 xl:min-h-screen`}>
       <animated.div
         className={`mx-auto max-w-[1440px] px-6 md:px-16 lg:px-20 `}
         style={{ opacity: onScreen ? 1 : 0, transition: '2s ease-in-out' }}>
@@ -34,10 +34,10 @@ const Skills = () => {
           What I love to do, what I do best and some things I can help you with
         </p>
 
-        <div className='max-w relative  z-10 mx-auto   grid w-full grid-cols-2 gap-6 sm:gap-12 md:grid-cols-3 lg:grid-cols-4 xl:gap-16'>
+        <div className='max-w relative z-10  mx-auto grid   w-full grid-cols-3 gap-2  sm:grid-cols-4   sm:gap-8 xl:grid-cols-6 xl:gap-12'>
           {data.map((item, indx) => {
-            const { id, icon, name } = item;
-            return <Skill key={id} icon={icon} name={name} />;
+            const { id, icon, name, href } = item;
+            return <Skill key={id} icon={icon} name={name} href={href} />;
           })}
         </div>
       </animated.div>

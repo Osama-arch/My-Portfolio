@@ -18,16 +18,16 @@ const Contacts = () => {
   }, [onScreen, windowWidth, setSectionVisible]);
 
   return (
-    <animated.div
+    <section
       id='contact'
       ref={ref}
-      className={`   w-full  bg-primaryBgColor  bg-[center_top_14rem] py-20`}
+      className={`   w-full  bg-primaryBgColor  bg-[center_top_14rem] py-10 md:py-20`}
       style={{ opacity: onScreen ? 1 : 0, transition: '2s ease-in-out' }}>
-      <div className='mx-auto max-w-[1440px] px-6 md:px-16 lg:px-20'>
+      <animated.div className='mx-auto max-w-[1440px] px-6 md:px-16 lg:px-20'>
         <h3 className='mb-2  text-3xl  font-bold  uppercase text-thirdTextColor lg:text-5xl '>
           Contact Me
         </h3>
-        <p className=' mb-28  text-primaryTextColor/90 lg:text-2xl  '>
+        <p className=' mb-16 text-primaryTextColor/90  md:mb-28 lg:text-2xl  '>
           Ready to discuss Your offer, or your project!
         </p>
         <div
@@ -77,8 +77,8 @@ const Contacts = () => {
             <Contact />
           </div>
         </div>
-      </div>
-    </animated.div>
+      </animated.div>
+    </section>
   );
 };
 

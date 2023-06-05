@@ -33,18 +33,18 @@ const Hero = () => {
       <section
         ref={ref}
         id='about'
-        className=' vid-bg   relative  grid w-full content-center   bg-primaryBgColor/80  pb-20 pt-40  xl:h-screen'>
+        className=' vid-bg   relative  grid w-full content-center   bg-primaryBgColor/80 pb-10 pt-20  md:pb-20 md:pt-40  xl:h-screen'>
         <animated.div
-          className=' mx-auto   my-0  flex h-full  w-full max-w-[1440px] flex-wrap  justify-between gap-8   px-6  md:flex-nowrap    md:px-16 lg:px-20 xl:max-h-[500px]'
+          className=' mx-auto   my-0  flex h-full w-full  max-w-[1440px] flex-col-reverse justify-between gap-8  px-6 md:flex-row     md:flex-nowrap    md:px-16 lg:px-20 xl:max-h-[500px]'
           style={{ opacity: onScreen ? 1 : 0, transition: '2s ease-in-out' }}>
           <HeroDescreption
             name={name}
             occupation={occupation}
             sParagraph={sParagraph}
           />
-          <div className='  flex h-full max-w-[35%] flex-col items-center  justify-between gap-8 md:grow lg:max-w-[512px] xl:flex-row  '>
+          <div className='  flex h-full  grow flex-col items-center  justify-between gap-8 md:max-w-[35%] lg:max-w-[512px] xl:flex-row  '>
             <HeroImage imageSrc={imageSrc} />
-            <div className=' text-white flex h-full w-full flex-col justify-evenly   text-4xl   md:h-auto md:flex-row lg:place-content-end lg:gap-8 lg:text-5xl xl:w-fit xl:flex-col   '>
+            <div className='text-white  flex h-full w-full justify-evenly   text-4xl   md:h-auto  lg:place-content-end lg:gap-8 lg:text-5xl xl:w-fit xl:flex-col   '>
               <Socials size={24} />
             </div>
           </div>

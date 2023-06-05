@@ -10,7 +10,7 @@ const HeroDescreption = ({
   sParagraph,
 }: DescreptionProps) => {
   return (
-    <div className='relative flex h-full max-w-[70%] flex-col  justify-between space-y-4  md:max-w-[65%]'>
+    <div className='relative flex h-full  flex-col   space-y-4  md:max-w-[65%] md:justify-between'>
       <h2 className='relative text-[2.5rem] font-bold  uppercase  text-thirdTextColor md:text-5xl lg:text-6xl '>
         {name}
       </h2>

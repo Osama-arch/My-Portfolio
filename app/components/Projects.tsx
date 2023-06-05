@@ -65,12 +65,13 @@ const Projects = () => {
 
   return (
     <>
-      <animated.div
+      <section
         ref={ref}
         id='projects'
-        className={`  w-full  bg-primaryBgColor  bg-[center_top_14rem] py-20`}
-        style={{ opacity: onScreen ? 1 : 0, transition: '2s ease-in-out' }}>
-        <div className='mx-auto max-w-[1440px] px-6 md:px-16 lg:px-20'>
+        className={`  w-full  bg-primaryBgColor  bg-[center_top_14rem] py-10 md:py-20`}>
+        <animated.div
+          className='mx-auto max-w-[1440px] px-6 md:px-16 lg:px-20'
+          style={{ opacity: onScreen ? 1 : 0, transition: '2s ease-in-out' }}>
           <h3 className='mb-2  text-3xl  font-bold  uppercase text-thirdTextColor lg:text-5xl '>
             My Portfolio
           </h3>
@@ -93,8 +94,8 @@ const Projects = () => {
             </div>
             <ProjectsArrows index={index} setIndex={setIndex} slides={slides} />
           </div>
-        </div>
-      </animated.div>
+        </animated.div>
+      </section>
     </>
   );
 };
