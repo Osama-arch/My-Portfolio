@@ -74,10 +74,10 @@ const MessageForm = () => {
                 <Field
                   name='user_name'
                   id='user_name'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
-                    errors.user_name && touched.user_name
-                      ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-1'
+                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none outline-0  outline-offset-0 placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-2 focus-visible:outline-hoverBgColor  ${
+                    errors.user_name &&
+                    touched.user_name &&
+                    ' outline-2  outline-inputALert'
                   }`}
                   placeholder='Full name or Organization '
                 />
@@ -97,10 +97,10 @@ const MessageForm = () => {
                   type='email'
                   name='user_email'
                   id='user_email'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
-                    errors.user_email && touched.user_email
-                      ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-1'
+                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none outline-0  outline-offset-0 placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-2 focus-visible:outline-hoverBgColor ${
+                    errors.user_email &&
+                    touched.user_email &&
+                    ' outline-2  outline-inputALert'
                   }`}
                   placeholder='Please enter your Email'
                 />
@@ -120,10 +120,10 @@ const MessageForm = () => {
                   type='phone'
                   name='user_phone'
                   id='user_phone'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
-                    errors.user_phone && touched.user_phone
-                      ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-1'
+                  className={`w-full rounded bg-primaryTextColor/90 p-2 text-2xl  outline-none outline-0 outline-offset-0 placeholder:text-xl  placeholder:text-secondaryBgColor/60 focus-visible:outline-2  focus-visible:outline-hoverBgColor ${
+                    errors.user_phone &&
+                    touched.user_phone &&
+                    ' outline-2  outline-inputALert '
                   }`}
                   placeholder='+000-000000000'
                 />
@@ -143,10 +143,10 @@ const MessageForm = () => {
                   as='select'
                   id='user_subject'
                   name='user_subject'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-2xl placeholder:text-secondaryBgColor/60 focus-visible:outline-2 focus-visible:outline-hoverBgColor ${
-                    errors.user_subject && touched.user_subject
-                      ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-1'
+                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none outline-0 outline-offset-0 placeholder:text-2xl placeholder:text-secondaryBgColor/60 focus-visible:outline-2 focus-visible:outline-hoverBgColor ${
+                    errors.user_subject &&
+                    touched.user_subject &&
+                    'outline-2  outline-inputALert '
                   }`}>
                   <option value='hireMe'>Freelance project</option>
                   <option value='openSource'>Open source project</option>
@@ -170,11 +170,12 @@ const MessageForm = () => {
                   rows={4}
                   id='user_comment'
                   name='user_comment'
-                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none placeholder:text-2xl placeholder:text-secondaryBgColor/60  focus-visible:outline-hoverBgColor ${
-                    errors.user_comment && touched.user_comment
-                      ? ' border-2 border-inputALert focus-visible:outline-0'
-                      : 'focus-visible:outline-1'
-                  }`}
+                  className={`w-full rounded bg-primaryTextColor/90 p-2  text-2xl outline-none outline-0 outline-offset-0
+                   placeholder:text-2xl placeholder:text-secondaryBgColor/60  focus-visible:outline-2 focus-visible:outline-hoverBgColor ${
+                     errors.user_comment &&
+                     touched.user_comment &&
+                     '  outline-2  outline-inputALert  '
+                   }`}
                 />
                 <ErrorMessage
                   name='user_comment'
