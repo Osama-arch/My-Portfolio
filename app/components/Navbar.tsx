@@ -42,8 +42,7 @@ const data = [
 
 const NavLink = ({ href, title, handleClick, activeLink }: NavProps) => {
   return (
-    <a
-      href={`#${href}`}
+    <span
       className={`cursor-pointer text-xl font-medium text-primaryTextColor hover:text-hoverBgColor hover:transition hover:duration-150    hover:ease-in ${
         activeLink === href
           ? 'border-b-[2px] border-b-hoverBgColor text-hoverBgColor  '
@@ -51,7 +50,7 @@ const NavLink = ({ href, title, handleClick, activeLink }: NavProps) => {
       }`}
       onClick={handleClick(href)}>
       {title}
-    </a>
+    </span>
   );
 };
 const Navbar = () => {
@@ -70,7 +69,7 @@ const Navbar = () => {
       setActiveLink(anchor);
       const y = element.getBoundingClientRect().top;
 
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      element.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
     setTimeout(() => {
       setNavClicked(false);
@@ -80,23 +79,19 @@ const Navbar = () => {
   useEffect(() => {
     windowWidth !== undefined && windowWidth >= 768 && setOpenNav(false);
   }, [windowWidth]);
-  const scrollEventHandle = useCallback(() => {
-    const currentScrollPos = window.pageYOffset;
-    if (!navClicked && currentScrollPos < 200) {
-      setActiveLink('about');
-    } else if (!navClicked) {
-      setActiveLink(sectionVisible);
-      location.hash = sectionVisible;
-    } else {
-      location.hash = activeLink;
-    }
-  }, [activeLink, navClicked, sectionVisible]);
   useEffect(() => {
+    const scrollEventHandle = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (!navClicked) {
+        if (currentScrollPos < 200) setActiveLink('about');
+        else setActiveLink(sectionVisible);
+      }
+    };
     window.addEventListener('scroll', scrollEventHandle);
     return () => {
       window.removeEventListener('scroll', scrollEventHandle);
     };
-  }, [scrollEventHandle]);
+  }, [navClicked, sectionVisible]);
   return (
     <>
       {openNav && (
